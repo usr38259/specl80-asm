@@ -8,6 +8,8 @@ if EXIST %1.bin del %1.bin
 exe2bin %1.exe %1.bin
 if ERRORLEVEL 1 goto bine
 if NOT EXIST %1.bin goto bine
+echo Please ignore tlink's no stack warning.
+echo.
 echo Done. Assembling '%1.asm' is successful.
 goto exit
 :asme
@@ -23,5 +25,5 @@ goto exit
 echo Build Intel 8080 assembly with MACROS80.INC helper
 echo Usage:
 echo build80 file-name
-echo File name must not have extension.
+echo File name must not have an extension.
 :exit
