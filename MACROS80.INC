@@ -359,6 +359,8 @@ endall macro
   code8080  ends
   end
 endm
+stack8080 segment byte stack 'STACK'
+stack8080 ends
 code8080  segment
 assume  cs:code8080, ds:code8080, ss:code8080
 
